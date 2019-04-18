@@ -7,6 +7,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/typed.js-master/src/typed.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -19,7 +22,7 @@
 						<header>
 							<span class="avatar"><img src="images/abhishekguptaround.jpg" alt="" style="width:70%;height:70%;"/></span>
 							<h1>Abhishek Gupta</h1>
-							<p>Developer | Designer | Maker</p>
+							<p>I am a <span id="typed"></span> </p>
                         </header>
                         
 						<footer>
@@ -50,6 +53,15 @@
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+				$('document').ready(function(){
+					var typed = new Typed('#typed',{
+                    strings: ["Developer","Designer","Maker"],
+                    backSpeed: 60,
+                    typeSpeed: 60,
+					loop: true,
+					loopCount: Infinity
+                  });
+				});
 			</script>
 
 	</body>
